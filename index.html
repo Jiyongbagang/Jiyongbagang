@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery</title>
+
+    <style>
+
+          body{
+              margin: 0px;
+              padding: 0px;
+              background-color: rgba(32, 161, 221, 0.726);
+           
+          }
+
+          #baba{
+              display: inline-flex;
+              position: fixed;
+              
+          }
+
+          #fix{
+
+            position: fixed;
+            top: 0%;
+            left: 10px;
+            color: rgb(255, 17, 0);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 34px;
+          }
+
+          #sidediv{
+              width: 230px;
+              height: 730px;
+              background-color: rgb(0, 0, 0);
+              position: fixed;
+              top: 0%;
+              text-align: center;
+              display:none;
+          }
+
+          #close{
+              text-align: end;
+              text-decoration: none;
+              font-size: 26px;
+              color: rgb(255, 0, 0);
+              position: absolute;
+              top: 4px;
+              border: none;
+              border-color: none;
+              right: 12px;
+          }
+
+              a{
+              text-decoration: none;
+              color: rgb(255, 255, 255);
+              font-family: verdana;
+              font-style:italic;
+          }
+
+        #main1{
+            width: 345px;
+            height: 700px;
+            background-color:rgb(159, 189, 27);
+            text-align: center;
+            top: 0%;
+            margin:2px;
+            
+        }
+
+        #main2{
+            width: 345px;
+            height: 700px;
+            background-color: rgb(4, 0, 255);
+            text-align: center;
+            margin:3px;
+            
+        }
+
+        #main3{
+            width: 345px;
+            height: 700px;
+            background-color: rgb(64, 248, 95);
+            text-align: center;
+            margin:3px;
+            position: relative;
+            
+            
+        }
+
+        #main4{
+            width: 345px;
+            height: 700px;
+            background-color: rgb(223, 13, 13);
+            text-align: center;
+            margin:3px;
+            position: relative;
+        }
+
+        a:hover{
+            color: brown;
+            border: 1px solid black;
+            border-bottom-color:yellow;
+        }
+
+
+        #head{
+            background-color: cornflowerblue;
+            border: 1px solid black;
+            text-align: center;
+            animation: fun 0.8s 0.4s linear infinite;
+        }
+
+        @keyframes fun{
+            0%{
+                color: blueviolet;
+            }
+            25%{
+                color: rgb(229, 255, 0);
+            }
+            50%{
+                color: rgb(255, 0, 13);
+            }
+            75%{
+                color: rgb(55, 0, 255);
+            }
+            100%{
+                color: rgb(0, 255, 98);
+            }
+        }
+
+
+
+        @media screen and (max-width:450px){
+            #main1{
+                width: 170px;
+                height: 260px;
+            }
+
+            #main2{
+                width: 170px;
+                height: 260px;
+            }
+            #main3{
+                position: fixed;
+                top: 345px;
+                width:170px;
+                height: 270px;
+                
+               
+            }
+
+            #main4{
+                position: fixed;
+                top: 345px;
+                left: 175px;
+                width:170px;
+                height: 270px;
+                
+               
+            }
+            #fix{
+                color: black;
+            }
+            
+        }
+
+
+        #sign{
+            color: blanchedalmond;
+            font-size: 21px;
+            font-style: italic;
+        }
+        #second1{
+            font-size: 35px;
+        }
+        #second2{
+            font-size: 35px;
+        }
+        #second3{
+            font-size: 35px;
+        }
+        #second4{
+            font-size: 35px;
+        }
+        #random1{
+            font-size: 35px;
+        }
+        #random2{
+            font-size: 35px;
+        }
+        #random3{
+            font-size: 35px;
+        }
+        #random4{
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+      <div id="head">
+          <h1>MobLOttery</h1>
+      </div>
+       <div id="baba">
+
+      
+    <div id="main1">
+        <h2>Count Down</h2>
+        <p id="second1"></p>
+        <h2>Result</h2>
+        <p id="random1"></p>
+    </div>
+
+
+    <div id="main2">
+        <h2>Count Down</h2>
+        <p id="second2"></p>
+        <h2>Result</h2>
+        <p id="random2"></p>
+    </div>
+
+    <div id="main3">
+        <h2>Count Down</h2>
+        <p id="second3"></p>
+        <h2>Result</h2>
+        <p id="random3"></p>
+    </div>
+
+    <div id="main4">
+        <h2>Count Down</h2>
+        <p id="second4"></p>
+        <h2>Result</h2>
+        <p id="random4"></p>
+    </div>
+    
+    
+
+</div>
+
+    
+
+
+
+<span id="fix">&#9776</span>
+<div id="sidediv">
+    <a href="#" id="close" onclick="clos()">&times;</a>
+     <br><br><br>
+    <a href="https://www.multicreater.blogspot.com">Support</a>
+    <br><br><br>
+    <a href="#">Email</a>
+    <br><br><br>
+    <a href="#">Contact</a>
+    <br><br><br>
+    <a href="#">Social</a>
+
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    
+
+    <h2 id="sign">Developed By <br> Jiyong Bagang</h2>
+</div>
+
+         <div id="foot">
+          <p>Term and Condition</p>
+          <p>Copy right @2021.This game is only for Entertainment purpose only</p>
+         </div>
+    <script>
+        function abc(){
+            var now = new Date();
+            var x = document.getElementById("second1").innerHTML = now.getSeconds();
+
+            if(x==0){
+                document.getElementById("random1").innerHTML = Math.floor(Math.random()*100);
+            }
+        }
+
+        setInterval(abc,1000);
+
+
+
+        function abc2(){
+            var now = new Date();
+            var x = document.getElementById("second2").innerHTML = now.getSeconds();
+
+            if(x==0){
+                document.getElementById("random2").innerHTML = Math.floor(Math.random()*100);
+            }
+        }
+
+        setInterval(abc2,1000);
+
+
+
+        function abc3(){
+            var now = new Date();
+            var x = document.getElementById("second3").innerHTML = now.getSeconds();
+
+            if(x==0){
+                document.getElementById("random3").innerHTML = Math.floor(Math.random()*100);
+            }
+        }
+
+        setInterval(abc3,1000);
+
+
+
+        function abc4(){
+            var now = new Date();
+            var x = document.getElementById("second4").innerHTML = now.getSeconds();
+
+            if(x==0){
+                document.getElementById("random4").innerHTML = Math.floor(Math.random()*100);
+            }
+        }
+
+        setInterval(abc4,1000);
+
+
+
+
+
+
+           document.getElementById("fix").addEventListener("click",fun);
+        function fun(){
+                  var y = document.getElementById("sidediv");
+                  y.style.display="block";
+        }
+
+
+        document.getElementById("fix").addEventListener("click",fun);
+        function clos(){
+                  var z = document.getElementById("sidediv");
+                  z.style.display="none";
+        }
+    </script>
+</body>
+</html>
